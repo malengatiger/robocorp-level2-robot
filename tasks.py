@@ -6,7 +6,6 @@ from RPA.Tables import Tables
 from RPA.PDF import PDF
 from RPA.Archive import Archive
 from robocorp.log import setup_log, info, debug
-
 import shutil
 
 ORDER_WEBSITE_URL = "https://robotsparebinindustries.com/#/robot-order"

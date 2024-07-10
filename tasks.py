@@ -8,9 +8,6 @@ from RPA.Archive import Archive
 from robocorp.log import setup_log, info, debug
 
 import shutil
-from dotenv import load_dotenv
-
-load_dotenv()
 
 ORDER_WEBSITE_URL = "https://robotsparebinindustries.com/#/robot-order"
 ORDERS_CSV_URL = "https://robotsparebinindustries.com/orders.csv"
@@ -165,8 +162,8 @@ def embed_screenshot_to_receipt(image_path, pdf_path):
 def archive_receipts():
     """Archives all the receipt pdf's into 1 zip archive"""
     debug(f"{mm} Zipping up the receipts ...")
-    lib = Archive()
-    lib.archive_folder_with_zip("./output/receipts", "./output/receipts.zip")
+    archiver = Archive()
+    archiver.archive_folder_with_zip("./output/receipts", "./output/receipts.zip")
 
 
 def finish():
